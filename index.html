@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tutoriels TSSR</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
@@ -31,44 +30,47 @@
       color: #b0bec5;
     }
 
-    nav {
-      background-color: #141414;
-      padding: 1rem;
-      text-align: center;
+    main {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .card-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
+      gap: 2rem;
+      margin-top: 2rem;
     }
 
-    nav ul li a {
-      color: #4fc3f7;
+    .card {
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card a {
+      display: block;
+      padding: 1rem;
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      border: 1px solid #4fc3f7;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    nav ul li a:hover {
-      background-color: #4fc3f7;
-      color: #0e0e0e;
-    }
-
-    main {
-      padding: 2rem;
-    }
-
-    main h2 {
-      color: #ffffff;
-      border-bottom: 2px solid #4fc3f7;
-      padding-bottom: 0.5rem;
+      color: #4fc3f7;
+      font-size: 1.2rem;
     }
 
     footer {
@@ -86,22 +88,22 @@
     <p>Un site fait par un étudiant pour les étudiants en Technicien Supérieur Systèmes et Réseaux</p>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="modules/reseau.html">Réseau</a></li>
-      <li><a href="modules/systeme.html">Système</a></li>
-      <li><a href="modules/scripting.html">Scripting</a></li>
-      <li><a href="modules/cybersecurite.html">Cybersécurité</a></li>
-      <li><a href="modules/virtualisation.html">Virtualisation</a></li>
-      <li><a href="modules/projet.html">Projet & Documentation</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <section>
-      <h2>À propos</h2>
-      <p>Ce site regroupe les principales compétences abordées pendant la formation TSSR, sous forme de tutoriels pratiques. C'est une aide mémoire, une base pour réviser, et un outil pour progresser.</p>
-    </section>
+    <h2>Choisissez un bloc de compétences :</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://via.placeholder.com/280x160?text=Support+et+Infra" alt="Support utilisateur">
+        <a href="modules/exploitation-support.html">Exploitation & Support</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/280x160?text=Maintenance+%26+S%C3%A9curit%C3%A9" alt="Maintenance et sécurité">
+        <a href="modules/maintenance-evolution.html">Maintenance & Sécurité</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/280x160?text=Comp%C3%A9tences+Transversales" alt="Compétences transversales">
+        <a href="modules/competences-transversales.html">Compétences transversales</a>
+      </div>
+    </div>
   </main>
 
   <footer>
